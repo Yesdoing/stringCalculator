@@ -2,12 +2,18 @@ package calculator;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import calculator.Calculator;
 
 public class CalculatorTest {
-	private Calculator cal = new Calculator();
+	private Calculator cal;
+	
+	@Before
+	public void setup() {
+		cal = new Calculator();
+	}
 
 	@Test
 	public void add() {
