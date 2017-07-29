@@ -22,7 +22,19 @@ public class CalculatorTest {
 		assertEquals(3, cal.add(2, 1));
 		System.out.println("add!");
 	}
+	
+	@Test
+	public void multiple() {
+		assertEquals(4, cal.multiply(2, 2));
+		System.out.println("multiply!");
+	}
 
+	@Test
+	public void subtract() {
+		assertEquals(2, cal.subtract(3, 1));
+		System.out.println("subtract!");
+	}
+	
 	@Test
 	public void divide() {
 		assertEquals(3, cal.divide(9, 3));
