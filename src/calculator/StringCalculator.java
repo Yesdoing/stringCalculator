@@ -39,7 +39,6 @@ public class StringCalculator {
 			String customDelimeter = m.group(1);
 			return m.group(2).split(customDelimeter);
 		} 
-		
 		return text.split(",|:");
 	}
 
@@ -48,6 +47,8 @@ public class StringCalculator {
 		for (int value : values) {
 			result += value;
 		}
+		
 		return result;
 	}
+	
 }
