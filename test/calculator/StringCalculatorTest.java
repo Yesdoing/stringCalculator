@@ -28,5 +28,4 @@ public class StringCalculatorTest {
 	public void add_쉼표구분자() throws Exception {
 		assertEquals(3, cal.add("1,2"));
 	}
-	//주석주석주석주석 테스
 }
