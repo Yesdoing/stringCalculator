@@ -13,30 +13,20 @@ public class StringCalculatorTest {
 		cal = new StringCalculator();
 	}
 	
-	@Test(expected=RuntimeException.class)
-	public void error() {
-		cal.add("-1,2,3");
-	}
-	
 	@Test
-	public void nullCheck() {
-		assertEquals(0, cal.add("")); 
+	public void add_null_또는_빈문자열() {
+		assertEquals(0, cal.add(""));
 		assertEquals(0, cal.add(null));
 	}
 	
 	@Test
-	public void oneStr() {
+	public void add_숫자하나() throws Exception {
 		assertEquals(1, cal.add("1"));
 	}
 	
 	@Test
-	public void basicDelimiter() {
-		assertEquals(2, cal.add("1,1"));
+	public void add_쉼표구분자() throws Exception {
+		assertEquals(3, cal.add("1,2"));
 	}
 	
-	@Test
-	public void customAdd() {
-		assertEquals(6, cal.add("//;\n1;2;3"));
-	}
-
 }
